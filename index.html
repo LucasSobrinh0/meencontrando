@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-bar.css">
     <title>ME ENCONTRANDO</title>
     <style>
         body {
@@ -28,50 +28,7 @@
             /* Evita a repetição da imagem de fundo */
             background-repeat: no-repeat;
             /* Altura de 90% da altura da tela */
-            height: 60vh;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: white;
-            padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
-        }
-
-        .navbar-logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .navbar-links {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .navbar-links li a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar-links li a:hover,
-        .navbar-links li a:focus {
-            background-color: #0056b3;
-            border-radius: 5px;
-        }
-
-        @media (max-width: 768px) {
-
-            .navbar-logo,
-            .navbar-links li a {
-                font-size: 15px;
-                /* Reduzindo o tamanho do texto para telas menores */
-                padding: 5px 10px;
-            }
+            height: 40vh;
         }
 
 
@@ -82,63 +39,17 @@
             text-align: center;
             color: white;
             height: 100%;
+            width: 100%;
         }
 
-        .animation {
-            height: 90px;
-            overflow: hidden;
-            font-size: 2.5rem;
-            text-shadow: 0 0 7px rgba(255, 255, 255, .3), 0 0 3px rgba(255, 255, 255, .3);
+        .animated-text {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            transform: translateY(0);
+            opacity: 1; /* Define a opacidade inicial como 1 para que o texto seja visível imediatamente */
+            transition: opacity 0.5s ease, transform 0.5s ease;
             margin-bottom: 15vh;
-        }
-
-        .animation>div>div {
-            padding: 0.25rem 0.75rem;
-            height: 2.81rem;
-            margin-bottom: 2.81rem;
-            display: inline-block;
-        }
-
-        .animation div:first-child {
-            animation: text-animation 5s infinite;
-        }
-
-        @keyframes text-animation {
-            0% {
-                margin-top: 0;
-            }
-
-            10% {
-                margin-top: 0;
-            }
-
-            20% {
-                margin-top: -5.62rem;
-            }
-
-            30% {
-                margin-top: -5.62rem;
-            }
-
-            40% {
-                margin-top: -11.24rem;
-            }
-
-            60% {
-                margin-top: -11.24rem;
-            }
-
-            70% {
-                margin-top: -5.62rem;
-            }
-
-            80% {
-                margin-top: -5.62rem;
-            }
-
-            90% {
-                margin-top: 0;
-            }
         }
 
         .section-2 {
@@ -280,7 +191,8 @@
 
         @media only screen and (max-width: 1200px) {
 
-            .animation {
+            .animated-text{
+                margin-bottom: 35vh;
                 font-size: 1.2rem;
             }
 
@@ -321,24 +233,16 @@
         <nav class="navbar">
             <div class="navbar-logo">Logo</div>
             <ul class="navbar-links">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
         <section class="section-1">
             <!-- Adicionando animação -->
-            <section class="animation">
-                <div class="first">
-                    <div>Aprenda de forma rápida e iterativa</div>
-                </div>
-                <div class="second">
-                    <div>Procure novas habilidades</div>
-                </div>
-                <div class="third">
-                    <div>Receba ajuda dos melhores profissionais</div>
-                </div>
-            </section>
+            <div class="container">
+                <p class="animated-text">Aprenda de forma rápida e iterativa</p>
+            </div>
         </section>
     </main>
 
@@ -366,7 +270,27 @@
             <a href="hobbies.html">Saiba Mais</a>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script>
+        let phrases = [
+            "Aprenda de forma rápida e iterativa",
+            "Procure novas habilidades",
+            "Receba ajuda dos melhores profissionais"
+        ];
+        let currentIndex = 0;
+        
+        function changeText() {
+            const textElement = document.querySelector('.animated-text');
+            currentIndex = (currentIndex + 1) % phrases.length;
+            textElement.style.opacity = '0';
+            setTimeout(() => {
+                textElement.innerText = phrases[currentIndex];
+                textElement.style.opacity = '1';
+            }, 500); // Espera meio segundo para mudar a opacidade e iniciar a nova frase
+        }
+        
+        // Inicializa a primeira transição imediatamente após a página carregar
+        setInterval(changeText, 1500);
+    </script>
 </body>
 
 </html>
