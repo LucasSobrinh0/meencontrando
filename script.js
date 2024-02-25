@@ -1,4 +1,4 @@
-const texts = ["A higiene do sono refere-se a práticas e hábitos que promovem um sono de qualidade. Fazer higiene do sono é essencial porque melhora a saúde física e mental, aumenta a energia e a produtividade, e reduz o risco de problemas de saúde. É a chave para uma vida mais saudável e feliz.",
+const texts = ["A higiene do sono refere-se a práticas e hábitos que promovem um sono de qualidade. Fazer higiene do sono é essencial porque melhora a saúde física e mental, aumenta a energia e a produtividade, e reduz o risco de problemas de saúde.",
  "Vá para a cama e acorde no mesmo horário todos os dias. Exemplo: Dormir às 22h e acordar às 6h.",
 "Mantenha seu quarto escuro, silencioso e fresco. Exemplo: Use cortinas blackout e ajuste o termostato para uma temperatura confortável.",
 "Não consuma café, chá ou refrigerante após as 14h. Exemplo: Troque seu café da tarde por uma infusão sem cafeína."];
