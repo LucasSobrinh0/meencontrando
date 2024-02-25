@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ME ENCONTRANDO</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .main-pg1 {
+            background-color: black;
+
+            /* Define o tamanho da imagem de fundo */
+            background-size: cover;
+            /* Centraliza a imagem de fundo */
+            background-position: center;
+            /* Evita a repetição da imagem de fundo */
+            background-repeat: no-repeat;
+            /* Altura de 90% da altura da tela */
+            height: 60vh;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+        }
+
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-links li a:hover,
+        .navbar-links li a:focus {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+
+            .navbar-logo,
+            .navbar-links li a {
+                font-size: 18px;
+                /* Reduzindo o tamanho do texto para telas menores */
+            }
+        }
+
+
+        .section-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            height: 100%;
+        }
+
+        .animation {
+            height: 90px;
+            overflow: hidden;
+            font-size: 2.5rem;
+            text-shadow: 0 0 7px rgba(255, 255, 255, .3), 0 0 3px rgba(255, 255, 255, .3);
+            margin-bottom: 15vh;
+        }
+
+        .animation>div>div {
+            padding: 0.25rem 0.75rem;
+            height: 2.81rem;
+            margin-bottom: 2.81rem;
+            display: inline-block;
+        }
+
+        .animation div:first-child {
+            animation: text-animation 5s infinite;
+        }
+
+        @keyframes text-animation {
+            0% {
+                margin-top: 0;
+            }
+
+            10% {
+                margin-top: 0;
+            }
+
+            20% {
+                margin-top: -5.62rem;
+            }
+
+            30% {
+                margin-top: -5.62rem;
+            }
+
+            40% {
+                margin-top: -11.24rem;
+            }
+
+            60% {
+                margin-top: -11.24rem;
+            }
+
+            70% {
+                margin-top: -5.62rem;
+            }
+
+            80% {
+                margin-top: -5.62rem;
+            }
+
+            90% {
+                margin-top: 0;
+            }
+        }
+
+        .section-2 {
+            width: 100%;
+            height: 50vh;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        .section-2 div {
+            width: 70vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .section-2 div h1 {
+            font-size: 3rem;
+        }
+
+        .section-2 div p {
+            font-size: 1.5rem;
+            text-align: center;
+            word-spacing: 2px;
+        }
+
+        .section-2 a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-2 a:hover {
+            background-color: #0056b3;
+        }
+
+
+        .section-3 {
+            width: 100%;
+            height: 50vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        .section-3 div {
+            width: 60vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+        }
+
+        .section-3 div h1 {
+            font-size: 3rem;
+        }
+
+        .section-3 div p {
+            font-size: 1.5rem;
+            text-align: center;
+            word-spacing: 2px;
+        }
+
+        .section-3 a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-3 a:hover {
+            background-color: #0056b3;
+        }
+
+        .section-4 {
+            width: 100%;
+            height: 50vh;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        .section-4 div {
+            width: 60vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+        }
+
+        .section-4 div h1 {
+            font-size: 3rem;
+            color: black;
+        }
+
+        .section-4 div p {
+            font-size: 1.5rem;
+            color: black;
+            text-align: center;
+            word-spacing: 2px;
+        }
+
+        .section-4 a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-4 a:hover {
+            background-color: #0056b3;
+        }
+
+        @media only screen and (max-width: 1200px) {
+
+            .animation {
+                font-size: 1.2rem;
+            }
+
+            .section-1 {
+                margin-top: 7vh;
+            }
+
+            .section-2 div p {
+                font-size: 1.2rem;
+            }
+
+            .section-2 div h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-3 div p {
+                font-size: 1.2rem;
+            }
+
+            .section-3 div h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-4 div p {
+                font-size: 1.2rem;
+            }
+
+            .section-4 div h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-pg1">
+        <!-- Barra de navegação -->
+        <nav class="navbar">
+            <div class="navbar-logo">Logo</div>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <section class="section-1">
+            <!-- Adicionando animação -->
+            <section class="animation">
+                <div class="first">
+                    <div>Aprenda de forma rápida e iterativa</div>
+                </div>
+                <div class="second">
+                    <div>Procure novas habilidades</div>
+                </div>
+                <div class="third">
+                    <div>Receba ajuda dos melhores profissionais</div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <section class="section-2">
+        <div>
+            <h1>Artigos</h1>
+            <p>
+                Explore a aba de artigos e descubra um mundo de conhecimento esperando por você! 📚✨
+            </p>
+            <a href="artigos.html">Saiba mais</a>
+        </div>
+    </section>
+    <section class="section-3">
+        <div>
+            <h1>Ajuda Online</h1>
+            <p>
+                Encontre soluções instantâneas na Ajuda Online. Seu guia rápido para resolver problemas. 🚀💻</p>
+            <a href="ajuda_online.html">Saiba mais</a>
+        </div>
+    </section>
+    <section class="section-4">
+        <div>
+            <h1>Hobbies</h1>
+            <p>Explore novos hobbies online! Encontre sua próxima paixão e comece a se divertir agora mesmo. 🎨🌟</p>
+            <a href="hobbies.html">Saiba Mais</a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
