@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav-bar.css">
+    <title>Artigos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,.4);
+        }
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-links {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+        .navbar-links li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar-links li a:hover,
+        .navbar-links li a:focus {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 900px;
+            /* Reduced size */
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .column-block {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 20px;
+            /* Smaller radius */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .column-text {
+            padding: 40px;
+            /* Reduced padding */
+            background: linear-gradient(145deg, #009bff, #006eff);
+            color: #fff;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .column-text h2 {
+            margin: 0;
+            font-size: 28px;
+            /* Smaller font size */
+        }
+
+        .column-text p {
+            margin: 20px 0;
+            font-size: 18px;
+            /* Smaller font size */
+        }
+
+        .column-text a {
+            display: inline-block;
+            background: #fff;
+            color: #2575fc;
+            padding: 10px 25px;
+            /* Smaller button */
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .column-text a:hover {
+
+            color: linear-gradient(145deg, #009bff, #006eff);
+            ;
+            box-shadow: 0 8px 16px rgba(37, 117, 252, 0.2);
+        }
+
+        .titulo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 6vh;
+            color: #007bff;
+        }
+
+        .titulo h1 {
+            margin: 0;
+            /* Remove a margem padrão do h1 */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .column-block {
+                flex-direction: column;
+                border-radius: 15px;
+            }
+
+            .column-block img {
+                width: 100%;
+                order: -1;
+                /* Image above text */
+            }
+
+            .column-text {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .navbar-logo, .navbar-links li a {
+                font-size: 18px; /* Reduzindo o tamanho do texto para telas menores */
+            }
+
+            .titulo h1{
+                font-size: 1.7rem;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-pg2">
+        <nav class="navbar">
+            <div class="navbar-logo">Logo</div>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+    </main>
+    <div class="titulo">
+        <h1>Explore um mundo de artigos</h1>
+    </div>
+
+    <div class="container">
+        <div class="column-block">
+            <div class="column-text">
+                <h2>Higiene do sono</h2>
+                <p>
+                    Priorize sua saúde com uma boa higiene do sono! Ao estabelecer uma rotina regular, criar um ambiente
+                    propício e evitar estímulos antes de dormir, você não apenas garante noites tranquilas, mas também
+                    melhora sua saúde física e mental. Durma bem para viver melhor! 💤🌙</p>
+                <a href="artigo_higiene_do_sono.html" class="discover-more">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

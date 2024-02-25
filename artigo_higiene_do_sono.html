@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="nav-bar.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(145deg, #009bff, #006eff);
+            background-size: cover;
+            /* Centraliza a imagem de fundo */
+            background-position: center;
+            /* Evita a repetição da imagem de fundo */
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .title-sono {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .title-sono h1 {
+            font-size: 2.5rem;
+            /* Tamanho maior para o título */
+            color: white;
+            /* Cor mais escura para o texto */
+            margin-top: 10vh;
+        }
+
+        .container-main {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40vh;
+        }
+
+        .container {
+            width: 70%;
+            max-width: 700px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar-container {
+            height: 15px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+            /* Sombra interna para dar profundidade */
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+            transition: width 0.3s ease;
+        }
+
+        .text-container {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .title-sono h1 {
+                font-size: 2rem;
+                /* Tamanho maior para o título */
+                color: white;
+                margin-top: 5vh;
+            }
+
+            .container {
+                padding: 10px;
+                margin-top: 8vh;
+
+            }
+
+            .text-container {
+                text-align: center;
+                margin-bottom: 20px;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-pg-sono">
+        <nav class="navbar"> 
+            <div class="navbar-logo">Logo</div>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="title-sono">
+            <h1>Higiene do Sono</h1>
+        </div>
+    </main>
+    <div class="container-main">
+        <div class="container">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="text-container">
+                <p id="displayText">Texto 1</p>
+            </div>
+            <div class="buttons-container">
+                <button onclick="prevText()">Prev</button>
+                <button onclick="nextText()">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

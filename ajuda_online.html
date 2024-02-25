@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav-bar.css">
+    <title>Ajuda Online</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 60px 10%;
+        }
+
+        .title {
+            color: #007bff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .link-area {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .link-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            background: linear-gradient(145deg, #009bff, #006eff);
+            color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .link-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .link-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .link-text {
+            font-size: 16px;
+            max-width: 280px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar" style="background-color: #0056b3;">
+        <div class="navbar-logo">Logo</div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="title">Ajuda Online</div>
+        <p class="description">A busca por ajuda online pode transformar a maneira como enfrentamos desafios. Acesse
+            recursos, obtenha suporte e descubra soluções no conforto de sua casa.</p>
+        <div class="link-area">
+            <a href="https://cvv.org.br/" class="link-button">
+                <div class="link-title">CVV</div>
+                <p class="link-text">Centro de Valorização da Vida é uma associação civil sem fins lucrativos
+                    brasileira, de caráter filantrópico, fundada em 1 de março de 1962 na cidade de São Paulo.</p>
+            </a>
+            <a href="https://amorexigente.org.br/" class="link-button">
+                <div class="link-title">Amor-Exigente</div>
+                <p class="link-text">O Amor-Exigente é um programa de auto e mútua ajuda que desenvolve preceitos para a
+                    organização da família.</p>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
